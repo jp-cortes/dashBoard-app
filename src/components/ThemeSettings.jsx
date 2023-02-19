@@ -4,7 +4,7 @@ const ThemeSettings = () => {
 
     return (
         <>
-        <div>ThemeSettings</div>
+        <div>ThemeSettings </div>
         </>
     );
 }

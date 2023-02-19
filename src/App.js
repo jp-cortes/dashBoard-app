@@ -43,6 +43,7 @@ const App = () => {
                                     </div>
                                 
                                  <div>
+                                    <ThemeSettings/>
                                     <Routes>
                                         {/* dasboard */}
                                         <Route path='/' element={<Ecommerce/>}/>
