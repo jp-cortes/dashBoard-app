@@ -8,7 +8,7 @@ import { links } from '../data/dummy';
 
 
 const Sidebar = () => {
- const { activeMenu, setActiveMenu, screenSize } = useStateContext();
+ const { activeMenu, setActiveMenu, screenSize, currentColor } = useStateContext();
 
  //this function will close  the side bar if the screen width is more than 900px
 const handleCloseSideBar = () => {
@@ -18,7 +18,7 @@ const handleCloseSideBar = () => {
     }
 }
 
- const activeLink = 'w-full flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2';
+ const activeLink = 'w-60 flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2';
  const normalLink = 'w-60 flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg  text-md text-gray-700  dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2';
     return (
         // md:overflow-hidden overflow-auto md:hover:overflow-auto
@@ -50,6 +50,11 @@ const handleCloseSideBar = () => {
                                 to={`/${link.name}`}
                                 key={link.name}
                                 onClick={handleCloseSideBar}
+
+                                style={({ isActive }) => ({
+                                    backgroundColor: isActive ? currentColor : ''
+                                })}
+
                                 className={({ isActive }) =>
                                 (isActive ? activeLink : normalLink) }
                                 >
