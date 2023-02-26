@@ -1,7 +1,7 @@
 import React from "react";
 import { BsCurrencyDollar } from 'react-icons';
 import { GoPrimitiveDot } from 'react-icons/go';
-import { Stacked, Pie, Button, SparkLine } from '../components';
+import { StackedChart, Pie, Button, SparkLine } from '../components';
 import { useStateContext } from "../contexts/ContextProvider";
 import { earningData, SparklineAreaData } from '../data/dummy';
 const Ecommerce = () => {
@@ -115,7 +115,7 @@ const Ecommerce = () => {
 
                     </div>
                     <div>
-                        <Stacked 
+                        <StackedChart 
                         width="320px"
                         height="360px"
                         />

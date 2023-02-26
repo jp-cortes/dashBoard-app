@@ -14,6 +14,6 @@ export { ChartsHeader } from './ChartsHeader'
 
 //Charts
 export { LineChart } from './Charts/LineChart';
-export { Pie } from './Charts/Pie';
+export { Doughnut } from './Charts/Pie';
 export { SparkLine } from './Charts/SparkLine';
-export { Stacked } from './Charts/Stacked';
+export { StackedChart } from './Charts/Stacked';
