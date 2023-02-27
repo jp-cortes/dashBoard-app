@@ -101,7 +101,7 @@ const Navbar = () => {
             <span className="text-gray-400 font-bold ml-1 text-14">
               Michael
             </span>
-            <MdKeyboardArrowDown className="text-gray-400 text-14"/>
+            <MdKeyboardArrowDown className="text-gray-400 text-14" />
           </div>
         </TooltipComponent>
         {isClicked.cart && <Cart />}
