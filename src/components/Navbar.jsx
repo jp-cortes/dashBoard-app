@@ -3,7 +3,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { FiShoppingCart } from "react-icons/fi";
 import { BsChatLeft } from "react-icons/bs";
 import { RiNotification3Line } from "react-icons/ri";
-import { MdKeyboardArrowDown, mdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { useStateContext } from "../contexts/ContextProvider";
 import { Chat, Cart, Notifications, UserProfile } from "./index";
@@ -32,10 +32,8 @@ const NavbarButton = ({ title, customFunc, icon, color, dotColor }) => {
 
 const Navbar = () => {
   const {
-    activeMenu,
     setActiveMenu,
     isClicked,
-    setIsClicked,
     handleClick,
     screenSize,
     setScreenSize,
@@ -96,7 +94,7 @@ const Navbar = () => {
             className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
             onClick={() => handleClick("userProfile")}
           >
-            <img className="rounded-full w-8 h-8" src={avatar} />
+            <img className="rounded-full w-8 h-8" src={avatar} alt="profile picture"/>
             <span className="text-gray-400 text-14">Hi, </span>{" "}
             <span className="text-gray-400 font-bold ml-1 text-14">
               Michael
