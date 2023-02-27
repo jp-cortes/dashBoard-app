@@ -14,8 +14,10 @@ const Sidebar = () => {
 const handleCloseSideBar = () => {
     if(activeMenu && screenSize <= 900) {
          setActiveMenu(false);
-         console.log('shadow')
+
     }
+
+    window.scrollTo(0, 0)
 }
 
  const activeLink = 'w-60 flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2';
@@ -23,12 +25,12 @@ const handleCloseSideBar = () => {
     return (
         // md:overflow-hidden overflow-auto md:hover:overflow-auto
       
-        <aside className="ml-3 h-auto pb-10 pt-5">
+        <aside className="ml-3 h-screen pb-10 pt-5">
             {activeMenu && (<>
                 <div className="flex justify-between items-center">
                     <Link to="/" onClick={handleCloseSideBar}
                     className="items-center gap-3 ml-3  mt-1 flex text-xl font-extrabold justify-between
-                    tracking-tight dark:text-white"
+                    tracking-tight dark:text-white text-slate-900"
                     >
                         <SiShopware/><span>Shoppy</span>
                         <TooltipComponent content="Menu" position="BottomCenter">
@@ -39,7 +41,7 @@ const handleCloseSideBar = () => {
                     </Link>
 
                 </div>
-                <div>
+                <div >
                     {links.map((item) => (
                         <div key={item.title}>
 
