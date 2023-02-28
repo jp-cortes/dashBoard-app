@@ -43,7 +43,7 @@ const Navbar = () => {
     const handleResize = () => setScreenSize(window.innerWidth);
 
     window.addEventListener("resize", handleResize);
-    handleResize();
+    // handleResize();
 
     return () => window.addEventListener("resize", handleResize);
   }, []);
@@ -94,7 +94,7 @@ const Navbar = () => {
             className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
             onClick={() => handleClick("userProfile")}
           >
-            <img className="rounded-full w-8 h-8" src={avatar} alt="profile picture"/>
+            <img className="rounded-full w-8 h-8" src={avatar} alt=""/>
             <span className="text-gray-400 text-14">Hi, </span>{" "}
             <span className="text-gray-400 font-bold ml-1 text-14">
               Michael
